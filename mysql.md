@@ -21,4 +21,15 @@ SHOW PROCESSLIST;
 
 # localize os IDS
 KILL id;
+
+# Verifying that a Connection is Using TLS
+# You can verify that a connection is using TLS by checking the connection's Ssl_cipher status variable. If it is non-empty, then the connection is using TLS. For example:
+
+SHOW SESSION STATUS LIKE 'Ssl_cipher';
++---------------+---------------------------+
+| Variable_name | Value                     |
++---------------+---------------------------+
+| Ssl_cipher    | DHE-RSA-AES256-GCM-SHA384 |
++---------------+---------------------------+
+1 row in set (0.00 sec)
 ```
