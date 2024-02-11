@@ -1,4 +1,4 @@
-```
+```sql
 # criar database:
 CREATE DATABASE app_leads;
 
@@ -12,19 +12,13 @@ FLUSH PRIVILEGES;
 
 # validar privilégios
 SHOW GRANTS FOR 'app_leads_user'@'%';
-```
-```
+
 # remover usuário:
 DROP USER 'app_user'@'%';
-```
 
-```bash
-# ufw allow
-sudo ufw allow from 192.168.0.1 to any port 3306
+# derrubar sessões presas
+SHOW PROCESSLIST;
 
-# ufw status
-sudo ufw status numbered
-
-# ufw remove rule
-sudo ufw delete number_rule
+# localize os IDS
+KILL id;
 ```
