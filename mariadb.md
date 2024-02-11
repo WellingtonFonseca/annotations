@@ -135,10 +135,21 @@ Neste guia, você instalou o sistema de gerenciamento de banco de dados relacion
 
 [fonte: digital ocean](https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04-pt#passo-2-configurando-o-mariadb)
 
-# mude a porta de acesso
+# mude a porta de acesso e a bind
 
 ```bash
 $ nano /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+
+na seção `[mysqld]` altere
+```
+bind-address            = 127.0.0.1
+```
+
+para
+
+```
+bind-address            = *
 ```
 
 na seção `[mysqld]` remova o `#` de `port` e altere para o `NUMERO_DA_PORTA` que desejar. Salve e feche.
