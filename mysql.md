@@ -3,7 +3,7 @@
 CREATE DATABASE app_leads;
 
 # criar usuário:
-CREATE USER 'app_leads_user'@'%' IDENTIFIED BY 'app_leads_password';
+CREATE USER 'app_leads_user'@'%' IDENTIFIED BY 'app_leads_password' REQUIRE SSL;
 
 # dar privilégios
 REVOKE ALL PRIVILEGES ON *.* FROM 'app_leads_user'@'%';
