@@ -16,6 +16,12 @@ SHOW GRANTS FOR 'app_leads_user'@'%';
 # remover usuário:
 DROP USER 'app_user'@'%';
 
+# listar usuarios
+select Host, User from mysql. user;
+
+# alterar host usuario
+RENAME USER 'user'@'%'123.4.5 'user'@'123.4.6';
+
 # derrubar sessões presas
 SHOW PROCESSLIST;
 
