@@ -76,6 +76,14 @@ O que identifiquei nestes, é que por exemplo meu layout da tabela está (`nome`
 
 Logo em seguida ao executar o comando de `import tablespace` alegou a divergência acima da falta do `.cfg` mas os dados foram apresentados de forma correta.
 
+Ao final o que eu me aconselho!
+
+- vou criar os `dumps` ou arquivos de `inserts`
+- recriar todo o banco de dados
+- e importar todos os dados da forma convencional
+
+porque desta forma o servidor está totalmente limpo de manipulação e os dados serão importados de forma correta através do `dump` ou dos arquivos `inserts`
+
 
 
 
