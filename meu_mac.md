@@ -56,3 +56,30 @@ algumas configurações:
    2. Next tab: `⌘ →`
 
 8. `Keys` > `Navigation Shortcuts` >  todos como `No shortcut`
+
+### zellij : https://zellij.dev/
+
+instalação feita via brew `brew install zellij`
+
+1. criar arquivo layout
+
+`zellij setup --dump-layout default > ~/zellij-layout-file.kdl`
+
+2. alterar o layout para:
+```
+layout {
+    pane size=3 borderless=true {
+        plugin location="status-bar"
+    }
+    pane size=2 borderless=true {
+        plugin location="tab-bar"
+    }
+    pane stacked=true {
+        pane
+        pane
+    }
+}
+```
+3. recuperar ou iniciar uma sessão com o layout
+
+`zellij attach -f local || zellij --session local --layout ~/zellij-layout-file.kdl`
